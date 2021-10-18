@@ -8,7 +8,7 @@ export default class LoginHeader extends Component {
   render(){
     return(
       <View style={this.style.header}>
-          <Image style={{marginTop:"10%"}} source={require('../assets/LoginHeader.png')}/>
+          <Image style={{marginTop:"10%"}} source={this.props.image}/>
       </View>
     )
   }

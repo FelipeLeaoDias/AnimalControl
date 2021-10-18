@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
 import {Text, View, StyleSheet, TextInput, TouchableOpacity, Dimensions} from 'react-native'
-import MyButton from './ButtonComponent'
-import { useFonts, Righteous_400Regular } from '@expo-google-fonts/righteous';
+import MyButton from '../ButtonComponent'
 
 export default class LoginBody extends Component {
+  constructor(props){
+    super(props);
+  }
+
   render(){
     return(
       <View style={this.style.container}>
@@ -29,7 +32,7 @@ export default class LoginBody extends Component {
         <View style={{marginVertical:15}}>
           <MyButton title="Entrar"/>
         </View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => {this.props.navigation.navigate('Register')}}>
             <Text style={{fontSize:14}}>Não possui uma conta? Cadastre-se</Text>
           </TouchableOpacity>
       </View>
@@ -40,7 +43,7 @@ export default class LoginBody extends Component {
   style = StyleSheet.create({
     container:{
       // padding: 20,
-      marginTop: this.props.height? this.props.height: Dimensions.get('window').height - Dimensions.get('window').height *1.3,
+      // marginTop: this.props.height? this.props.height: Dimensions.get('window').height - Dimensions.get('window').height *1.3,
       maxHeight: 400,
       alignItems: 'center',
       width: this.props.width ? this.props.width : Dimensions.get('window').width,
