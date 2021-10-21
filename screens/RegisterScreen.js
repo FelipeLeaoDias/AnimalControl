@@ -19,7 +19,8 @@ export default class RegisterScreen extends Component {
       <TouchableWithoutFeedback onPress = {Keyboard.dismiss()}>
         <View style = {this.styles.container}>
           <ImageComp image={
-      require("../assets/RegisterHeader.png")}/>
+      require("../assets/RegisterHeader.png")}
+      />
           <RegisterBody navigation={this.props.navigation}/>
           <ImageComp image={
       require("../assets/RegisterFooter.png")}/>
@@ -31,6 +32,11 @@ export default class RegisterScreen extends Component {
 
   styles = StyleSheet.create({
     container :
-        {flex : 1, backgroundColor : '#fff', justifyContent : 'space-between'},
+        {
+          flex : 1, backgroundColor : '#fff', 
+          minWidth: Dimensions.get('screen').width,
+          justifyContent : 'space-between',
+          alignContent: 'center',
+        },
   });
 }
