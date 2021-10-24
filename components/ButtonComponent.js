@@ -8,7 +8,7 @@ export default class MyButton extends Component {
   render(){
     return(
      <TouchableOpacity onPress={this.props.onPress}>
-      <View style={this.style.button}>
+      <View style={{...this.style.button, ...this.props.style}}>
         <Text>{this.props.title}</Text>
       </View>
       </TouchableOpacity> 
@@ -20,7 +20,9 @@ export default class MyButton extends Component {
       borderRadius: 10,
       backgroundColor: "lightgreen",
       alignItems:'center',
-      width: this.props.width ? this.props.width : Dimensions.get('window').width * 0.5,
+      justifyContent: 'center',
+      width: this.props.size? this.props.size: Dimensions.get('window').width * 0.5,
+      height: this.props.size? this.props.size: Dimensions.get('window').height* 0.5,
       padding: 8,
       elevation: 3,
       // height: this.props.height ? this.props.height : Dimensions.get('window').width * 0.08,
