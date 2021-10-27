@@ -10,7 +10,7 @@ export default class MainField extends Component {
 
   render(){
     return (
-      <View style={this.styles.container}>
+      <View style={{...this.styles.container, ...this.props.style}}>
         <View style={this.styles.title_container}>
           <Text style={{fontSize: 20}}>{this.props.title}</Text>
         </View>
@@ -23,9 +23,11 @@ export default class MainField extends Component {
   }
 styles= StyleSheet.create({
     container:{
+      zIndex:0,
       margin: this.width *0.05
     },
     title_container: {
+      zIndex:0,
       borderBottomColor: 'black',
       borderBottomWidth: 1,
     }
