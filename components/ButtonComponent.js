@@ -10,7 +10,7 @@ export default class MyButton extends Component {
      <TouchableOpacity style={{...this.style.button, ...this.props.style}}
       onPress={this.props.onPress}>
       <View style={this.props.style2}>
-        <Text>{this.props.title}</Text>
+        <Text style={this.props.title_style}>{this.props.title}</Text>
       </View>
       </TouchableOpacity> 
     );

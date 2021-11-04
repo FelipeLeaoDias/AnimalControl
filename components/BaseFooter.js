@@ -1,0 +1,35 @@
+import React, {Component} from 'react'
+import {View, StyleSheet} from 'react-native'
+
+import MyButton from './ButtonComponent'
+
+export default class BaseFooter extends Component {
+  constructor(props){
+    super(props);
+  }
+
+  render(){
+    return(
+      <View style={this.styles.container}>
+        <MyButton style={{...this.styles.button, backgroundColor: '#d3d3d3'}} 
+        title="Voltar"
+        title_style={{fontSize: 16}}/>
+        {this.props.title2 ? <MyButton title={this.props.title2} style={this.styles.button}/> : <View></View>}
+      </View>
+    )
+  }
+  styles=StyleSheet.create({
+    container:{
+      backgroundColor: '#7AFFBF',
+      // alignContent: 'center', 
+      justifyContent : 'space-between',
+      flexDirection: 'row',
+      paddingVertical: 10,
+      paddingHorizontal: 15,
+    },
+    button: {
+      maxHeight: 40,
+      maxWidth: 100,
+    }
+  })
+}

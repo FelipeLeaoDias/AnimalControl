@@ -5,6 +5,7 @@ import { createStackNavigator } from 'react-navigation-stack'
 import LoginScreen from '../screens/LoginScreen'
 import RegisterScreen from '../screens/RegisterScreen'
 import MainScreen from '../screens/MainScreen'
+import ProductivityScreen from '../screens/ProductivityScreen'
 
 const MainNavigator = createStackNavigator({
     // Login:{
@@ -20,12 +21,19 @@ const MainNavigator = createStackNavigator({
     //     },
     //   screen:RegisterScreen,
     // },
+    // Main: {
+    //     navigationOptions: {
+    //         headerShown: false,
+    //       },
+    //     screen: MainScreen,
+    // },
     Main: {
         navigationOptions: {
             headerShown: false,
           },
-        screen: MainScreen,
+        screen: ProductivityScreen,
     }
+
 })
 
 

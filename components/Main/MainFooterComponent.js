@@ -16,7 +16,6 @@ export default class MainFooterComponent extends Component {
         </View>
         <View style={this.styles.container}>
           <ImageButton source={require('../../assets/Cronograma.png')} text="Cronograma"/>
-          <MyButton size={100} title={<Ionicons name='add' size={50}/>}/>
         </View>
       </MainField>
     )
