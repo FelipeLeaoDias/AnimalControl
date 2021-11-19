@@ -8,12 +8,18 @@ export default class BaseFooter extends Component {
     super(props);
   }
 
+  voltarTela = () => {
+    this.props.navigation.pop()
+  }
+
   render(){
     return(
       <View style={this.styles.container}>
         <MyButton style={{...this.styles.button, backgroundColor: '#d3d3d3'}} 
         title="Voltar"
-        title_style={{fontSize: 16}}/>
+        title_style={{fontSize: 16}}
+        onPress={this.voltarTela}
+      />
         {this.props.title2 ? <MyButton title={this.props.title2} style={this.styles.button}/> : <View></View>}
       </View>
     )

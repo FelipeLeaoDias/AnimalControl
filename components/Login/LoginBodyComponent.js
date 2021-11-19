@@ -30,7 +30,10 @@ export default class LoginBody extends Component {
       </View>
         </View>
         <View style={{marginVertical:15}}>
-          <MyButton title="Entrar"/>
+          <MyButton title="Entrar" 
+          style={{maxHeight: 50}}
+          onPress={() => {this.props.navigation.navigate('Main')}}
+        />
         </View>
           <TouchableOpacity onPress={() => {this.props.navigation.navigate('Register')}}>
             <Text style={{fontSize:14}}>Não possui uma conta? Cadastre-se</Text>

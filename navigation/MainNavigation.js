@@ -6,6 +6,8 @@ import LoginScreen from '../screens/LoginScreen'
 import RegisterScreen from '../screens/RegisterScreen'
 import MainScreen from '../screens/MainScreen'
 import ProductivityScreen from '../screens/ProductivityScreen'
+import AnimalsScreen from '../screens/AnimalsScreen'
+import AnimalDetailsScreen from '../screens/AnimalDetailsScreen.js'
 
 const MainNavigator = createStackNavigator({
     // Login:{
@@ -27,13 +29,24 @@ const MainNavigator = createStackNavigator({
     //       },
     //     screen: MainScreen,
     // },
-    Main: {
+    // Productivity: {
+    //     navigationOptions: {
+    //         headerShown: false,
+    //       },
+    //     screen: ProductivityScreen,
+    // },
+    Animal: {
         navigationOptions: {
             headerShown: false,
           },
-        screen: ProductivityScreen,
+        screen: AnimalsScreen,
+    },
+    Details: {
+        navigationOptions: {
+            headerShown: false,
+          },
+        screen: AnimalDetailsScreen,
     }
-
 })
 
 

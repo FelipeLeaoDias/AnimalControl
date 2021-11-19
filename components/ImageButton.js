@@ -7,7 +7,7 @@ export default class ImageButton extends Component {
   }
   render(){
     return(
-      <TouchableOpacity style={this.styles.container}>
+      <TouchableOpacity style={this.styles.container} onPress={this.props.onPress}>
         <Image source={this.props.source} />
         <Text style={{fontSize:18, color:'#47A937'}}>{this.props.text}</Text>
       </TouchableOpacity>

@@ -2,12 +2,9 @@ import React, {Component} from 'react'
 import {Text, StyleSheet, Image, View, Dimensions} from 'react-native';
 
 import MainHeader from '../components/MainHeader'
-import MainBodyComponent from '../components/Main/MainBodyComponent'
-import MainFooterComponent from '../components/Main/MainFooterComponent'
 import PopUpMenu from '../components/PopUpMenu'
-import ScreenBody from '../components/ScreenBody'
 
-export default class MainScreen extends Component {
+export default class ScreenBody extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -22,10 +19,13 @@ export default class MainScreen extends Component {
   render(){
     return(
       <View>
-        <ScreenBody>
-          <MainBodyComponent navigation={this.props.navigation}/>
-          <MainFooterComponent navigation={this.props.navigation}/>
-        </ScreenBody>
+        <MainHeader onBtnPress={()=>{this.toggleVisible()}}/>
+          {this.props.children}
+        <PopUpMenu visible={this.state.visible}
+        onPressBtn1={()=>{console.log('Configurações')}}
+        onPressBtn2={()=>{console.log('Perfil')}}
+        onPressBtn3={()=>{console.log('Desconectar')}}
+        />
       </View>
     )
   }

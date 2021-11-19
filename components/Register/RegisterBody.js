@@ -50,7 +50,7 @@ export default class RegisterBody extends Component {
 
 
         <View style={{marginVertical:15}}>
-          <MyButton title="Cadastrar"/>
+          <MyButton title="Cadastrar" style={{maxHeight:50}}/>
         </View>
       </View>
       </KeyboardAwareScrollView>
