@@ -56,7 +56,7 @@ export default class AnimalsScreen extends Component {
               )}
             />
           </MainField>
-          <BaseFooter title2="Adicionar" navigation={this.props.navigation}/>
+          <BaseFooter title2="Adicionar" navigation={this.props.navigation.navigate('AddAnimal')}/>
         </ScreenBody>
       </View>
     )
