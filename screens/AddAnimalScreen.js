@@ -4,25 +4,34 @@ import {Dimensions, ScrollView, StyleSheet} from 'react-native'
 import ScreenBody from '../components/ScreenBody'
 import MainField from '../components/MainField'
 import BaseFooter from '../components/BaseFooter'
+import InfoCard from '../components/Details/InfoCard'
+import CharacteristicsCard from '../components/Details/CharacteristicsCard'
+import VaccineCard from '../components/Details/VaccineCard'
 import AddAnimalBody from '../components/AddAnimal/AddAnimalBody'
-import MyButton from '../components/ButtonComponent'
 
 export default class AddAnimalScreen extends Component {
-  render() {
-    return (
+  constructor(props){
+    super(props);
+  }
+
+
+  render(){
+    return(
       <ScreenBody >
         <ScrollView style={this.styles.container}>
         <MainField title="Registrando Animal">
-        </MainField>
         <AddAnimalBody>
           
         </AddAnimalBody>
 
+
+        </MainField>
+        
+
       </ScrollView >
       <BaseFooter navigation={this.props.navigation} />
-      <MyButton />
       </ScreenBody>
-    )
+    );
   }
 
   height = Dimensions.get('window').height;
@@ -30,8 +39,9 @@ export default class AddAnimalScreen extends Component {
     container:{
       minHeight: Dimensions.get('screen').height - 201,
       maxHeight: Dimensions.get('screen').height - 201,
+      backgroundColor : '#FFFFFF'
+
     }
+
   })
 }
-
-const styles = StyleSheet.create({})
