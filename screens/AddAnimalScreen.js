@@ -21,10 +21,7 @@ export default class AddAnimalScreen extends Component {
         <ScrollView style={this.styles.container}>
         <MainField title="Registrando Animal">
         <AddAnimalBody>
-          
         </AddAnimalBody>
-
-
         </MainField>
         
 
