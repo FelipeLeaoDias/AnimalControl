@@ -19,12 +19,14 @@ export default class MainHeader extends Component {
   height = Dimensions.get('window').height
   styles=StyleSheet.create({
     container:{
-      backgroundColor : '#04d26f', 
+      backgroundColor : '#00D870', 
       alignContent: 'center', 
       justifyContent : 'space-around',
       flexDirection: 'row',
       paddingTop: 25,
-      paddingBottom: 10
+      paddingBottom: 10,
+      borderColor:"black",
+      borderWidth:0.2,
     },
   })
 }

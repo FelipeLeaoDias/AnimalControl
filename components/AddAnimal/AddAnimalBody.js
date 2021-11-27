@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import {View, Text, StyleSheet, Dimensions, TouchableOpacity} from 'react-native'
 import MainField from '../MainField';
 import { TextInput } from 'react-native-gesture-handler';
-import { CheckBox } from 'react-native-elements';
-import SelecaoSexo from './SelecaoSexo';
+import SexSelection from './SexSelection';
 import SelectionMom from './SelectionMom';
 import SelectionDad from './SelectionDad';
+import DataSelect from './DataSelect';
+import VaccineAnimal from './VaccineAnimal';
+//import DataSelect from './DataSelect';
 
 
 export default class AddAnimalBody extends Component {
@@ -15,43 +17,25 @@ export default class AddAnimalBody extends Component {
 
 
   render() {
-    
-    //const [Selected, setSelected] = useState(false)
     return (
       <View style={this.styles.container}>
-        <View style={this.styles.Register}>
-
+        <View>
           <MainField title="Nome do Animal">
-          <TextInput 
-          placeholder="Digite o Nome do Animal" 
-          style={this.styles.input}
-          />
+            <TextInput 
+            placeholder="Digite o Nome do Animal" 
+            style={this.styles.input}
+            />
           </MainField>
 
           <MainField title="Caracteristicas">
-          <TextInput 
-          placeholder="Digite as caracteristicas do animal" 
-          style={this.styles.input}
-          />
+            <TextInput 
+            placeholder="Digite as caracteristicas do animal" 
+            style={this.styles.input}
+            />
           </MainField>
           
           <MainField title="Sexo do Animal">
-          <CheckBox
-            style={this.styles.check}
-            title="Macho"
-            checkedIcon='dot-circle-o'
-            uncheckedIcon='circle-o'
-          //  checked={Selected}
-          //  onPress={() => setSelected(!Selected)}
-          />
-          <CheckBox
-            style={this.styles.check}
-            title="Fêmea"
-            checkedIcon='dot-circle-o'
-            uncheckedIcon='circle-o'
-          //  checked={Selected}
-          //  onPress={() => setSelected(!Selected)}
-          />
+            <SexSelection></SexSelection>
           </MainField>
 
           <MainField title="Selecione a Mãe">
@@ -66,7 +50,6 @@ export default class AddAnimalBody extends Component {
               OBSERVAÇÃO: Para selecionar o Pai, deve-se cadastrar o animal anteriormente!
             </Text>
             <SelectionDad></SelectionDad>
-
           </MainField>
 
           <MainField title="Numero do Brinco">
@@ -77,25 +60,22 @@ export default class AddAnimalBody extends Component {
             />
           </MainField>
 
-          <MainField title="Data de Nascimento">
+          <MainField title="Cor do Animal">
             <TextInput 
-            placeholder="Digite a data de nascimento" 
+            placeholder="Digite a cor do animal" 
             style={this.styles.input}
-            keyboardType="numeric"
             />
           </MainField>
 
+          <MainField title="Data de Nascimento">
+            <DataSelect></DataSelect>
+          </MainField>
 
-
-
-
-
-
-
+          <VaccineAnimal></VaccineAnimal>
 
           
+
         </View>
-        
       </View>
     )
   }
@@ -112,7 +92,7 @@ export default class AddAnimalBody extends Component {
       maxWidth: Dimensions.get('window').width * 0.9,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#04D26F',
+      backgroundColor: '#00D870',
       borderRadius: 10,
       borderColor: 'black',
       borderWidth: 1,
@@ -123,11 +103,12 @@ export default class AddAnimalBody extends Component {
       marginTop: 10,
       padding: 10,
       width: 300,
-      backgroundColor: '#CFFFDA',
+      backgroundColor: '#E3FFE9',
       fontSize: 16,
       fontWeight: 'bold',
       borderRadius: 10,
+      borderColor:"black",
+      borderWidth:1,
     }
-   
   })
 }

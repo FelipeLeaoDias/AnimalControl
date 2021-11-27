@@ -26,12 +26,15 @@ export default class BaseFooter extends Component {
   }
   styles=StyleSheet.create({
     container:{
-      backgroundColor: '#7AFFBF',
+      backgroundColor: '#00D870',
       // alignContent: 'center', 
       justifyContent : 'space-between',
       flexDirection: 'row',
       paddingVertical: 10,
       paddingHorizontal: 15,
+      borderColor:"black",
+      borderWidth:0.2,
+      
     },
     button: {
       maxHeight: 40,

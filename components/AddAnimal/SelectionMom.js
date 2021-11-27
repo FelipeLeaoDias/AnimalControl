@@ -49,11 +49,12 @@ export default class SelectionMom extends Component {
     Conteiner: {
       marginTop: 10,
       width: 220,
-      backgroundColor: '#CFFFDA',
+      backgroundColor: '#E3FFE9',
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: '#CFFFDA',
       borderRadius: 10,
+      borderColor:"black",
+      borderWidth:1,
     }
   })
 }

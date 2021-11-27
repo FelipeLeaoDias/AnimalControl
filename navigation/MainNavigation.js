@@ -48,7 +48,7 @@ const MainNavigator = createStackNavigator({
     //      },
     //    screen: AnimalDetailsScreen,
     //},
-    Register: {
+    RegisterAnimal: {
       navigationOptions: {
           headerShown: false,
         },
