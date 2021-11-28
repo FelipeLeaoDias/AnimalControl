@@ -1,5 +1,5 @@
-import React, { Component, useState } from 'react'
-import {View, Text, StyleSheet, Dimensions, TouchableOpacity} from 'react-native'
+import React, {Component} from 'react'
+import {View, Text, StyleSheet, Dimensions} from 'react-native'
 import MainField from '../MainField';
 import { TextInput } from 'react-native-gesture-handler';
 import SexSelection from './SexSelection';
@@ -7,7 +7,7 @@ import SelectionMom from './SelectionMom';
 import SelectionDad from './SelectionDad';
 import DataSelect from './DataSelect';
 import VaccineAnimal from './VaccineAnimal';
-//import DataSelect from './DataSelect';
+
 
 
 export default class AddAnimalBody extends Component {
@@ -76,6 +76,7 @@ export default class AddAnimalBody extends Component {
           
 
         </View>
+        
       </View>
     )
   }
@@ -98,6 +99,7 @@ export default class AddAnimalBody extends Component {
       borderWidth: 1,
       padding: 20,
       marginTop: 10,
+      paddingBottom: 300,
     },
     input: {
       marginTop: 10,

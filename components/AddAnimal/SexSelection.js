@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react'
+import React, {Component} from 'react'
 import {View, StyleSheet} from 'react-native'
 import { CheckBox } from 'react-native-elements';
 
@@ -41,5 +41,6 @@ const styles = StyleSheet.create({
   formCheckbox: {
     margin: 10,
     backgroundColor: '#E3FFE9',
+    borderColor: 'black',
   },
 });

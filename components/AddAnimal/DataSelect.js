@@ -1,6 +1,5 @@
-import React, { Component, useState } from 'react'
+import React, {Component} from 'react'
 import {View, StyleSheet} from 'react-native';
-import {Picker} from '@react-native-picker/picker';
 import DatePicker from 'react-native-datepicker'
 export default class DataSelect extends Component {
   constructor(props){
@@ -11,6 +10,7 @@ export default class DataSelect extends Component {
 
   render() {
     return (
+      <View style={this.styles.buttoncenter}>
       <View style={this.styles.Conteiner}>
         <DatePicker
         style={{width: 200}}
@@ -19,6 +19,7 @@ export default class DataSelect extends Component {
         format="DD-MM-YYYY"
         minDate="01-01-2000"
         maxDate="31-12-2050"
+        
         customStyles={{
           dateIcon: {
             position: 'absolute',
@@ -33,6 +34,7 @@ export default class DataSelect extends Component {
         }}
         onDateChange={(date) => {this.setState({date: date})}}
       />
+      </View>
       </View>
     )
 
@@ -51,6 +53,9 @@ export default class DataSelect extends Component {
       borderColor:"black",
       borderWidth:1,
       
-    }
+    },
+    buttoncenter: {
+      alignItems: 'center',
+    },
   })
 }

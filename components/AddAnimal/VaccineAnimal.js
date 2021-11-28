@@ -1,37 +1,60 @@
-import React, { Component, useState } from 'react'
-import {View, Text, StyleSheet, Dimensions, TouchableOpacity} from 'react-native'
+import React, {Component} from 'react'
+import {View, Text, StyleSheet} from 'react-native'
 import MainField from '../MainField';
 import { TextInput } from 'react-native-gesture-handler';
-import { CheckBox } from 'react-native-elements';
-import SelecaoSexo from './SexSelection';
-import SelectionMom from './SelectionMom';
-import SelectionDad from './SelectionDad';
 import DataSelect from './DataSelect';
-//import DataSelect from './DataSelect';
+import MyButton from '../ButtonComponent';
+import VaccineList from './VaccineList.js';
 
 
 export default class VaccineAnimal extends Component {
   constructor(props){
     super(props);
   }
+  
 
+  AdicionarVacina = () => {
+    
+  }
 
   render() {
-    
-    //const [Selected, setSelected] = useState(false)
+  
     return (
-      <View style={this.styles.Container}>
+      <View>
         <View style={this.styles.Register}>
 
-          <MainField title="Nome da Vacina">
+          <MainField title="Cadastro de Vacinas">
+            <View style={this.styles.TitleWidth}>
+            <Text style={this.styles.Title}>Nome da Vacina</Text>
+            </View>
           <TextInput 
           placeholder="Digite o nome da vacina já aplicada" 
           style={this.styles.input}
           />
+
+
+            <View style={this.styles.TitleWidth}>
+              <Text style={this.styles.Title}>Data da Vacina</Text>
+            </View>
+            <View style={this.styles.buttoncenter}>
+              <DataSelect></DataSelect>
+            
+              <MyButton style={{...this.styles.button, backgroundColor: '#E3FFE9'}} 
+                title="Adicionar Vacina"
+                title_style={{fontSize: 16}}
+                onPress={this.AdicionarVacina}
+              />
+            </View>
+            <VaccineList></VaccineList>
+            
           </MainField>
-         
-        </View>
         
+
+          
+            
+          
+        </View>
+
       </View>
     )
   }
@@ -48,7 +71,24 @@ export default class VaccineAnimal extends Component {
       borderRadius: 10,
       borderColor:"black",
       borderWidth:1,
-    }
-   
+    },
+    Title: {
+      fontSize: 16,
+      borderBottomColor: 'black',
+      borderBottomWidth: 1,
+    },
+    TitleWidth: {
+      width: 160,
+      paddingTop: 20,
+    },
+    button: {
+      marginTop: 20,
+      maxHeight: 40,
+      maxWidth: 100,
+
+    },
+    buttoncenter: {
+      alignItems: 'center',
+    },
   })
 }

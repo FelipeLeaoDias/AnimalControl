@@ -14,6 +14,7 @@ export default class SelectionMom extends Component {
 
   render() {
     return (
+      <View style={this.styles.buttoncenter}>
       <View style={this.styles.Conteiner}>
         <Picker
           selectedValue={this.state.mom}
@@ -29,7 +30,7 @@ export default class SelectionMom extends Component {
           <Picker.Item label="Miguez" value="Ming" />
           
         </Picker>
-
+        </View>
       </View>
 
     )
@@ -55,6 +56,9 @@ export default class SelectionMom extends Component {
       borderRadius: 10,
       borderColor:"black",
       borderWidth:1,
-    }
+    },
+    buttoncenter: {
+      alignItems: 'center',
+    },
   })
 }

@@ -55,6 +55,13 @@ const MainNavigator = createStackNavigator({
       screen: AddAnimalScreen,
   }
 })
-
+//AddAnimalScreen,
+//AnimalDetailsScreen,
+//AnimalsScreen,
+//ProductivityScreen,
+//MainScreen,
+//RegisterScreen,
+//LoginScreen,
+//
 
 export default createAppContainer(MainNavigator);

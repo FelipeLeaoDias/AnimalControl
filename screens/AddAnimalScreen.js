@@ -26,7 +26,7 @@ export default class AddAnimalScreen extends Component {
         
 
       </ScrollView >
-      <BaseFooter navigation={this.props.navigation} />
+      <BaseFooter title2="Finalizar" navigation={this.props.navigation.navigate('Animal')}/>
       </ScreenBody>
     );
   }
